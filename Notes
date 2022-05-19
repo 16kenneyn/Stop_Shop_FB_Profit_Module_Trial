@@ -1,0 +1,35 @@
+##  FACEBOOK PROPHET NOTES ##
+
+RESOURCES:
+DOCUMENTATION: https://facebook.github.io/prophet/docs/quick_start.html#python-api
+YOUTUBE VIDEO: https://www.youtube.com/watch?v=KvLG1uTC-KU
+
+
+
+
+STEPS FROM NICK NOCH NACK YOUTUBE VIDEO
+
+0.) Install and Import Dependencies
+    - Need to install pystan version 2.19.1.1 before installing prophet
+        """
+        -$ pip install pystan==2.19.1.1
+        -$
+        -$ pip install prophet
+        """
+1.) Read in Data and Process Dates
+    -This can be tricky depending on the file type (csv or excel)
+    -If the data types of file are not setup as datetime format for
+        pandas dataframe you will need to add new column to setup
+        correct datetime format.
+        - This is key for step 2
+    -Once datatypes are correct will need to drop all columns other than
+        date column and sales or dollar column (value column)
+
+2.) Train Model
+    -Set up model to take df as input.
+
+3.) Forecast Away
+    -Setting up prediction/future dataframe (m.make_future_dataframe(periods= ,freq= 'D')
+
+4.) Plot Predictions
+    - plot1 = m.plot(forecast)
